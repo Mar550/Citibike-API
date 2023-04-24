@@ -1,4 +1,4 @@
-# CitiBike (Server Branch)
+# CitiBike API
 
 CITIBIKE is an full-stack e-commerce application created with React JS, Node JS and Express JS. The app features all the basic functionalities of an e-commerce website, and is built around the topic of electric bikes.
 
@@ -8,18 +8,13 @@ CITIBIKE is an full-stack e-commerce application created with React JS, Node JS 
 You can find a quick demo of the application in the following youtube link:
 https://www.youtube.com/watch?v=AQ7Psim_8xo&feature=youtu.be
 
-## How to run the app
-
-1. Download both branches of the application and open them in a folder.
-2. Install all dependencies using the ‘npm I’ command.
-3. Start the web server using the ‘npm start’. The app will be served at http://localhost:3000/.
-4. Go to http://localhost:3000/ in your browser and access to the home page.
 
 ## Tech Stack
 
 - Front-End
     React JS
-
+    Redux
+    
 - Back-End
     Node JS,
     Express JS,
