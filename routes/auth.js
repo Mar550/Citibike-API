@@ -20,7 +20,6 @@ router.post("/register", async (req,res)=>{
     // Add error message in case informations are uncomplete
     try {
         const savedUser = await user.save();
-        console.log(savedUser);
         res.status(201).json(savedUser)
     } catch(err){
         res.status(500).json(err);
