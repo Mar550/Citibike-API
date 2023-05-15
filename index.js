@@ -21,8 +21,10 @@ mongoose.connect("mongodb+srv://Citibike:Qwerty.12345@cluster0.a2fd9.mongodb.net
 
 //Middlewares
 app.use(cors({
-    origin: '*'
+    origin: '*',
+    methods: ["GET", "POST","PUT","DELETE"],
 }));
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
