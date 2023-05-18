@@ -20,10 +20,17 @@ mongoose.connect("mongodb+srv://Citibike:Qwerty.12345@cluster0.a2fd9.mongodb.net
     });
 
 //Middlewares
-app.use(cors({
-    origin: 'http://localhost:3000'
-  }));
-  
+app.use(cors());
+
+  app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+    res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
+    if (req.method == "OPTIONS") {
+      return res.sendStatus(200);
+    }
+    next();
+  });
+
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
