@@ -21,7 +21,7 @@ mongoose.connect("mongodb+srv://Citibike:Qwerty.12345@cluster0.a2fd9.mongodb.net
 
 //Middlewares
 var allowedOrigins = ['http://localhost:3000',
-                      'https://citibike-ecommerce.vercel.app/'];
+                      'https://citibike-ecommerce.vercel.app/api'];
 app.use(cors({
   origin: function(origin, callback){
     if(!origin) return callback(null, true);
