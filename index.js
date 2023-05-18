@@ -20,20 +20,10 @@ mongoose.connect("mongodb+srv://Citibike:Qwerty.12345@cluster0.a2fd9.mongodb.net
     });
 
 //Middlewares
-var allowedOrigins = ['http://localhost:3000',
-                      'https://citibike-ecommerce.vercel.app/api'];
 app.use(cors({
-  origin: function(origin, callback){
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){
-      var msg = 'The CORS policy for this site does not ' +
-                'allow access from the specified Origin.';
-      return callback(null, true);
-    }
-    return callback(null, true);
-  }
-}));
-
+    origin: 'http://localhost:3000'
+  }));
+  
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
