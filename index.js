@@ -14,21 +14,13 @@ dotenv.config();
 
 //Database connection
 mongoose.connect("mongodb+srv://Citibike:Qwerty.12345@cluster0.a2fd9.mongodb.net/?retryWrites=true&w=majority")
-    .then(() => console.log("Connected to DB !"))
-    .catch((err) => {
-        console.log(err);  
-    });
+  .then(() => console.log("Connected to DB !"))
+  .catch((err) => {
+    console.log(err);  
+  });
 
 //Middlewares
 app.use(cors());
-
-app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
-})
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
