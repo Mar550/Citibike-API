@@ -23,11 +23,8 @@ mongoose.connect("mongodb+srv://Citibike:Qwerty.12345@cluster0.a2fd9.mongodb.net
 app.use(cors());
 
   app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+    res.setHeader("Access-Control-Allow-Origin", "https://citibike-api.vercel.app/api");
     res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
-    if (req.method == "OPTIONS") {
-      return res.sendStatus(200);
-    }
     next();
   });
 
